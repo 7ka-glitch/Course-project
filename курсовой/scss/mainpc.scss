@@ -1,0 +1,849 @@
+@import "normalize.css";
+
+$background_color: #F4A261;
+
+body {
+  background-color: $background_color;
+}
+
+@font-face {
+  font-family: 'Iner';
+  src: url(/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url(../fonts/Lora/Lora-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.lower_vector,
+.upper_vector {
+  display: none;
+}
+
+.background_image1 {
+  margin: 0 auto;
+  height: 100vh;
+  background-image: url('/images/desert.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.52vw;
+
+    .menu-toggle {
+      width: 5vw;
+      cursor: pointer;
+    }
+
+    .menu_body {
+      .menu_list {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+
+        li {
+          margin: 0 30px;
+          cursor: pointer;
+
+          a {
+            font-family: 'Inter';
+            text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            font-size: clamp(24px, 4vw, 50px);
+            color: black;
+
+            &:before {
+              content: "";
+            }
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.M-M_container {
+  position: absolute;
+  top: 26%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  /* сдвиг для точного центрирования */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    font-family: 'Lora';
+    font-size: 5.21vw;
+    font-weight: 400;
+    color: white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  h2 {
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 2.1vw;
+    font-weight: 400;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .found_menu {
+    margin-top: 3vw;
+    form {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      width: 78.125vw;
+      height: 5.2vw;
+
+      .element {
+        font-family: 'Inter';
+        text-align: left;
+        font-size: 1.04vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        width: 14vw;
+        height: 100%;
+        padding: 0.52vw;
+        background-color: #D9D9D9;
+        border-right: 3px solid black;
+        gap: 1.3vw;
+      }
+
+      select,
+      input[type="number"] {
+        font-family: 'Inter';
+        width: 100%;
+        font-size: 1.3vw;
+        font-weight: 600;
+        background-color: #D9D9D9;
+        cursor: pointer;
+        appearance: none;
+        background-image: url('/images/icons/arrow_for_selectors.svg');
+        background-repeat: no-repeat;
+        background-position: right 0.52vw center;
+        background-size: 0.89vw;
+        border: none;
+      }
+
+      input[type="number"] {
+        background-image: none;
+        width: 98%;
+      }
+
+      select:focus,
+      input[type="number"]:focus {
+        outline: none;
+      }
+
+      option {
+        font-size: 1.24vw;
+        font-weight: 600;
+      }
+
+      button {
+        width: 7.81vw;
+        height: 120%;
+        background-color: #ff8c00;
+        color: black;
+        border: none;
+        font-size: 1.56vw;
+        cursor: pointer;
+        border-radius: 0 30px 30px 0;
+      }
+
+      button:hover {
+        background-color: #e07b00;
+      }
+
+      #date {
+        background-color: #D9D9D9;
+        font-size: 1.3vw;
+        font-weight: 600;
+        border: none;
+      }
+    }
+  }
+}
+
+.main {
+  background-color: $background_color;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  margin-bottom: 5vw;
+  font-family: 'Open Sans';
+  font-size: 3.13vw;
+  text-align: center;
+  font-weight: bold;
+
+  .title_span {
+    font-size: 5.2vw;
+    color: #A82D00;
+    font-weight: 600;
+  }
+}
+
+.why_us_selection {
+  width: 100%;
+  height: 93vw;
+  display: flex;
+  position: relative;
+
+  .items_why_us {
+    margin: 3vw;
+    width: 23.80vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .why_us_text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    img {
+      width: 7.92vw;
+      height: auto;
+    }
+
+    h6 {
+      text-align: center;
+      align-items: center;
+      font-family: 'Inter';
+      font-size: 2vw;
+      font-weight: 600;
+      margin-bottom: 1.5vw;
+    }
+
+    p {
+      text-align: center;
+      align-items: center;
+      font-family: 'Inter';
+      font-size: 1.5vw;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+
+  .item1 {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    transform: translate(-0%, -20%);
+  }
+
+  .item2 {
+    position: absolute;
+    right: 50%;
+    left: 48%;
+    top: 48%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .item3 {
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+    transform: translate(-0%, 20%);
+
+    img {
+      width: 13vw;
+      height: auto;
+    }
+  }
+
+  .why_us_picture1,
+  .why_us_picture2 {
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: 1.67vw;
+  }
+
+  .why_us_picture1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .why_us_picture2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.line {
+  position: absolute;
+  width: 63.91vw;
+  height: auto;
+  top: 44%;
+  right: 50%;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popular_tour_selection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+
+  .popular_image {
+    position: relative;
+    border-radius: 20px;
+    width: 60%;
+    height: 40vw;
+    background-image: url(/images/desert.jpg);
+    background-size: cover;
+    background-position: center;
+
+    .arrow-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    #prevBtn {
+      left: -7.81vw;
+    }
+
+    #nextBtn {
+      right: -7.81vw;
+    }
+
+    .prevBtn,
+    .nextBtn {
+      width: 7.81vw;
+      height: auto;
+    }
+
+    .prevBtn {
+      transform: rotate(180deg);
+    }
+  }
+
+  .slider {
+    display: flex;
+    align-items: center;
+    position: relative; /* Для абсолютного позиционирования дочерних элементов */
+    width: 56.4vw;
+    height: 30.6vw; /* Укажи высоту */
+    margin: 0 auto;
+
+    .slider_link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      text-decoration: none;
+      
+    }
+
+    .slider_link.active {
+      opacity: 1;
+      pointer-events: auto; /* Включаем кликабельность для активной ссылки */
+      z-index: 10; /* Активная ссылка поверх остальных */
+    }
+
+    .slider_img {
+      position: absolute; /* Изображения накладываются друг на друга */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .slider_img.active {
+      opacity: 1;
+    }
+  }
+
+  .btn {
+    width: 7.8vw;
+    height: auto;
+    position: absolute;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .next_btn {
+    right: -20%;
+  }
+
+  .prev_btn {
+    left: -20%;
+    transform: rotate(180deg);
+  }
+}
+
+.description {
+  position: absolute;
+  bottom: 0.52vw;
+  left: 0.52vw;
+  color: #fff;
+  padding: 0.5vw 1vw;
+  font-family: 'Lora';
+  font-size: 2vw;
+  z-index: 1000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.excursions_selection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 55.21vw;
+
+  .excursion_items {
+    display: flex;
+    justify-content: center;
+    gap: 3.39vw;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .items {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      width: 24.48vw;
+      height: 31.5vw;
+      border: #A82D00 solid 3px;
+      border-radius: 25px;
+      box-sizing: border-box;
+
+      .information {
+        width: 100%;
+        height: 30%;
+        background-color: white;
+        border-radius: 0 0 25px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.52vw;
+
+        p {
+          text-align: center;
+          align-items: center;
+        }
+
+        .object {
+          font-size: 2.08vw;
+          font-weight: bold;
+          font-family: 'Inter';
+        }
+
+        .сountry {
+          font-family: 'Lora';
+          font-size: 1.6vw;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5vw;
+        }
+
+        img {
+          width: 1.82vw;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.footer {
+  margin-top: 12vw;
+  background-color: #4A4A4A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.21vw;
+  width: 100%;
+
+  .footer_items {
+    margin: 0 3vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+
+    img {
+      width: 2.6vw;
+      height: auto;
+    }
+
+    .item {
+      font-family: 'Inter';
+      color: #CCCCCC;
+      font-size: 1.56vw;
+      font-weight: 500;
+
+      a {
+        color: #CCCCCC;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .background_image2 {
+    width: 101%;
+    height: 56.6vw;
+    background-image: url(/images/desert.jpg);
+    background-size: 100% auto;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .background_image1 {
+    background: none;
+    height: auto;
+
+    .header {
+      width: 100vw;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: rgba(175, 94, 30, 1);
+      border-bottom: 0.375vw solid black;
+      transition: all 0.5s ease;
+
+      &.active {
+        align-items: flex-start;
+
+        .menu-toggle {
+          margin-left: 2.5vw;
+          margin-top: 1.25vw;
+        }
+
+        /*линия между шаром и списком li */
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: calc(12.52vw + 1.25vw + 0.625vw + 1.25vw);
+          border-top: 1px solid black;
+        }
+      }
+
+      .menu-toggle {
+        width: 12.52vw;
+        margin-bottom: 2vw;
+      }
+
+      nav.menu_body {
+        display: none;
+        width: 100%;
+        margin-top: 1.25vw;
+        padding-left: 2.5vw;
+        text-align: left;
+
+        &.active {
+          display: block;
+        }
+
+        .menu_list {
+          display: flex;
+          flex-direction: column;
+          gap: 1.25vw;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            margin: 0.63vw 0;
+            width: 100%;
+            text-align: left;
+
+            a {
+              font-size: 5.22vw;
+              color: black;
+              text-shadow: none;
+
+              &::before {
+                content: "-";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .M-M_container {
+    position: absolute;
+    margin: 0 auto;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    text-align: center;
+
+    h1 {
+      font-size: 6.96vw;
+    }
+
+    h2 {
+      font-size: 2.78vw;
+    }
+  }
+
+  .title {
+    font-size: 4.17vw;
+
+    .title_span {
+      font-size: 6.96vw;
+    }
+  }
+
+  .why_us_selection {
+    height: 270vw;
+    justify-content: space-between;
+    position: relative;
+
+    .upper_vector {
+      display: block;
+      width: 80%;
+      height: auto;
+      position: absolute;
+      top: 33%;
+      left: 7%;
+      transform: rotate(-33%, -7%);
+    }
+
+    .lower_vector {
+      display: block;
+      width: 80%;
+      height: auto;
+      position: absolute;
+      bottom: 33%;
+      left: 13%;
+    }
+
+    .why_us_text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .items_why_us {
+      width: 97vw;
+      height: auto;
+      flex-direction: row;
+      gap: 0.7vw;
+
+      img {
+        width: 22.96vw;
+        height: auto;
+      }
+
+      h6 {
+        text-align: center;
+        font-size: 5vw;
+      }
+
+      p {
+        text-align: center;
+        font-size: 3vw;
+      }
+    }
+
+    .item1 {
+      left: 0;
+      top: 20%;
+      transform: translate(-0%, 30%);
+    }
+
+    .item2 {
+      right: 50%;
+      left: 48%;
+      top: 48%;
+      bottom: 50%;
+      transform: translate(-50%, -50%);
+
+      img {
+        order: 1;
+        margin-right: 3vw;
+      }
+    }
+
+    .item3 {
+      position: absolute;
+      left: 0;
+      bottom: 20%;
+      transform: translate(-0%, 20%);
+
+      img {
+        width: 30vw;
+        height: auto;
+      }
+    }
+
+    .why_us_picture1,
+    .why_us_picture2 {
+      width: 73%;
+      height: auto;
+      margin: 0;
+    }
+
+    .why_us_picture1 {
+      left: 50%;
+      right: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    .why_us_picture2 {
+      right: 50%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    .line {
+      display: none;
+    }
+  }
+
+  .popular_tour_selection {
+    margin-top: 17vw;
+
+    .slider {
+      width: 75vw;
+      height: 40vw;
+    }
+
+    .next_btn {
+      right: -12%;
+    }
+
+    .prev_btn {
+      left: -12%;
+      transform: rotate(180deg);
+    }
+  }
+
+  .description {
+    bottom: 1.2vw;
+    left: 1.2vw;
+    font-size: 4vw;
+  }
+
+  .excursions_selection {
+    margin-top: 17vw;
+    height: 100%;
+
+    .excursion_items {
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 7vw;
+
+      .items {
+        width: 55vw;
+        height: 63vw;
+
+        .information .object {
+          font-size: 5.22vw;
+        }
+
+        .information .сountry {
+          font-size: 4vw;
+
+          img {
+            width: 5vw;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 17vw;
+    justify-content: space-between;
+    align-items: start;
+    height: 56vw;
+    width: 101%;
+    flex-direction: column;
+
+    .footer_items {
+      margin: 5vw;
+      .item {
+        font-size: 5.22vw;
+      }
+
+      img {
+        width: 8.7vw;
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная</title>
+  <link rel="stylesheet" href="./css/mainpc.css">
+</head>
+
+<body>
+  <div class="background_image1">
+    <div class="header">
+      <img src="/images/icons/ballon.svg" alt="меню" class="menu-toggle">
+      <nav class="menu_body">
+        <ul class="menu_list">
+          <li><a href="/about_us.html" class="menu-about">О нас</a></li>
+          <li><a href="/shares.html" class="menu-promotions">Акции</a></li>
+          <li><a href="/tours.html" class="menu-tours">Туры</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="background_image2">
+      <div class="M-M_container">
+        <h1>M-M Travels</h1>
+        <h2>Авторские туры</h2>
+        <div class="found_menu">
+          <form method="GET" action="/tours.html">
+            <div class="element">
+              <label for="departure_city">Город вылета:</label>
+              <select id="departure_city" name="departure_city">
+                <option value="Минск">Минск</option>
+                <option value="Гродно">Гродно</option>
+                <option value="Брест">Брест</option>
+                <option value="Гомель">Гомель</option>
+              </select>
+            </div>
+            <div class="element">
+              <label for="country">Страна:</label>
+              <select id="country" name="country">
+                <option value="Турция">Турция</option>
+                <option value="Египет">Египет</option>
+                <option value="Мальдивы">Мальдивы</option>
+                <option value="Италия">Италия</option>
+                <option value="Греция">Греция</option>
+                <option value="Таиланд">Таиланд</option>
+                <option value="Испания">Испания</option>
+                <option value="Средиземноморский круиз">Средиземноморский круиз</option>
+                <option value="Карибский круиз">Карибский круиз</option>
+                <option value="ОАЭ">ОАЭ</option>
+                <option value="Мексика">Мексика</option>
+              </select>
+            </div>
+            <div class="element">
+              <label for="date">Выберите дату:</label>
+              <input type="date" id="date" name="date">
+            </div>
+            <div class="element">
+              <label for="nights">Ночей:</label>
+              <input type="number" id="nights" name="nights" min="1" max="30" value="7">
+            </div>
+            <div class="element">
+              <label for="tourists">Туристов:</label>
+              <input type="number" id="tourists" name="tourists" min="1" max="15" value="1">
+            </div>
+            <button type="submit">Найти</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <p class="title"><span class="title_span">-</span>Почему мы?</p>
+    <div class="why_us_selection">
+      <img class="why_us_picture1" src="/images/camel.png" alt="">
+      <div class="items_why_us item1">
+        <img src="/images/icons/map.svg" alt="">
+        <div class="why_us_text">
+          <h6>Всегда рады помочь</h6>
+          <p>Мы оказываем информационную и визовую поддержку наших клиентов</p>
+        </div>
+      </div>
+      <img class="upper_vector" src="/images/upper_vector.svg" alt="">
+      <img class="line" src="/images/line_pc.svg" alt="dashed-line">
+      <div class="items_why_us item2">
+        <img src="/images/icons/coconut.svg" alt="">
+        <div class="why_us_text">
+          <h6>Безупречный сервис</h6>
+          <p>Общение, индивидуальный подход, внимание к мелочам и нюансам</p>
+        </div>
+      </div>
+      <img class="lower_vector" src="/images/lower_vector.svg" alt="">
+      <div class="items_why_us item3">
+        <img src="/images/icons/planet.svg" alt="">
+        <div class="why_us_text">
+          <h6>20 лет в туризме</h6>
+          <p>Колоссальный опыт, доверие туристов и сотрудничество с лучшими партнерами</p>
+        </div>
+      </div>
+      <img class="why_us_picture2" src="/images/stone.png" alt="">
+    </div>
+    <div class="popular_tour_selection">
+      <p class="title"><span class="title_span">-</span>Популярные туры</p>
+      <div class="slider">
+        <div class="description">Таиланд</div>
+        <a href="/tours.html?country=Таиланд" class="slider_link"><img src="/images/tours/id13.webp" alt=""
+            class="slider_img active"></a>
+        <a href="/tours.html?country=ОАЭ" class="slider_link"><img src="/images/tours/id15.webp" alt=""
+            class="slider_img"></a>
+        <a href="/tours.html?country=Египет&maxPrice=800" class="slider_link"><img src="/images/tours/id5.webp" alt=""
+            class="slider_img"></a>
+        <a href="/tours.html?country=Испания" class="slider_link"><img src="/images/tours/id14.jpg" alt=""
+            class="slider_img"></a>
+        <a href="/tours.html?country=Турция&hasExcursion=true" class="slider_link"><img src="/images/tours/id2.jpeg"
+            alt="" class="slider_img"></a>
+        <div class="btn prev_btn"><img src="/images/icons/arrow.svg" alt=""></div>
+        <div class="btn next_btn"><img src="/images/icons/arrow.svg" alt=""></div>
+      </div>
+    </div>
+    <div class="excursions_selection">
+      <p class="title"><span class="title_span">-</span>Экскурсии</p>
+      <div class="excursion_items">
+        <a href="/tours.html?hasExcursion=true&country=Турция">
+          <div class="excursion_item1 items">
+            <img src="/images/tours/id2.jpeg" alt="">
+            <div class="information">
+              <p class="object">Голубая мечеть</p>
+              <p class="сountry"><img src="/images/icons/mappointer.svg" alt="">Стамбул</p>
+            </div>
+          </div>
+        </a>
+        <a href="/tours.html?hasExcursion=true&country=Италия">
+          <div class="excursion_item2 items">
+            <img src="/images/tours/id11.webp" alt="">
+            <div class="information">
+              <p class="object">Колизей</p>
+              <p class="сountry"><img src="/images/icons/mappointer.svg" alt="">Рим</p>
+            </div>
+          </div>
+        </a>
+        <a href="/tours.html?hasExcursion=true&country=Греция">
+          <div class="excursion_item3 items">
+            <img src="/images/tours/id12.webp" alt="">
+            <div class="information">
+              <p class="object">Акрополь</p>
+              <p class="сountry"><img src="/images/icons/mappointer.svg" alt="">Афины</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer_items">
+      <img src="/images/icons/inst.svg" alt="instagram">
+      <p class="item"><a href="https://instagram.com/_7k.a_">_7k.a_</a></p>
+    </div>
+    <div class="footer_items">
+      <img src="/images/icons/tg.svg" alt="telegram">
+      <p class="item"><a href="https://t.me/Ftkjf">Ftkjf</a></p>
+    </div>
+    <div class="footer_items">
+      <img src="/images/icons/mail.svg" alt="mail">
+      <p class="item">karlyukartem07@outlook.com</p>
+    </div>
+  </div>
+
+
+  <script src="/js/main_slider.js"></script>
+  <script src="/js/main_page.js"></script>
+  
+
+</body>
+
+</html>

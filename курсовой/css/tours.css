@@ -1,0 +1,616 @@
+@import "normalize.css";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F4A261;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url(/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf);
+}
+@font-face {
+  font-family: "Inter";
+  src: url(/fonts/Inter/);
+}
+.header {
+  background-color: rgb(175, 94, 30);
+  border-bottom: 3px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.header .menu-toggle {
+  width: 5vw;
+  cursor: pointer;
+}
+.header .menu_body .menu_list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.header .menu_body .menu_list li {
+  margin: 0 30px;
+  cursor: pointer;
+}
+.header .menu_body .menu_list li .menu-tours {
+  text-decoration: underline;
+}
+.header .menu_body .menu_list li a {
+  font-family: "Inter";
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  font-size: clamp(24px, 4vw, 50px);
+  color: black;
+}
+.header .menu_body .menu_list li a:before {
+  content: "";
+}
+.header .menu_body .menu_list li a:hover {
+  text-decoration: underline;
+}
+
+#filter-container {
+  justify-content: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 0.52vw;
+  margin: 1.04vw 20%;
+  align-items: center;
+}
+
+#filter-container input,
+#filter-container select {
+  padding: 0.42vw;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 1vw;
+}
+#filter-container input#filterInput,
+#filter-container select#filterInput {
+  width: 15.89vw;
+  flex-shrink: 0;
+}
+#filter-container input#nightsFilter,
+#filter-container select#nightsFilter {
+  width: 4vw;
+  flex-shrink: 0;
+}
+#filter-container input#minPrice,
+#filter-container select#minPrice {
+  flex-shrink: 0;
+  width: 5.73vw;
+}
+#filter-container input#maxPrice,
+#filter-container select#maxPrice {
+  flex-shrink: 0;
+  width: 6.25vw;
+}
+#filter-container input#touristsFilter,
+#filter-container select#touristsFilter {
+  flex-shrink: 0;
+  width: 4.96vw;
+}
+#filter-container input#dateFilter,
+#filter-container select#dateFilter {
+  flex-shrink: 0;
+  width: 8vw;
+}
+
+label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-family: "Inter";
+  font-size: 1.5vw;
+}
+label input[type=checkbox] {
+  transform: scale(2);
+  margin: 8px;
+}
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.2vw;
+  margin-bottom: 5.21vw;
+}
+.catalog .product-card {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2vw;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.78vw;
+  width: 95vw;
+  height: 13vw;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.catalog .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.catalog .product-card .product-image {
+  width: 20%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.catalog .product-card .information {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.78vw;
+  width: 70%;
+  margin: 0.26vw 0;
+}
+.catalog .product-card .information h5 {
+  font-family: "Lora";
+  font-size: 2vw;
+  color: #333;
+  overflow-wrap: break-word;
+}
+.catalog .product-card .information p {
+  font-family: "Inter";
+  font-size: 1vw;
+  color: #666;
+}
+.catalog .product-card .information .excursion {
+  color: rgb(24, 233, 94);
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.catalog .product-card .information .nights {
+  color: #000;
+  font-weight: 600;
+}
+.catalog .product-card .information .tourists {
+  color: #000;
+  font-weight: 600;
+}
+.catalog .product-card .information .departure-date {
+  color: #000;
+  font-weight: 600;
+}
+.catalog .product-card .price {
+  border-left: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #000;
+}
+.catalog .product-card .price .original-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 1.8vw;
+}
+.catalog .product-card .price .discounted-price {
+  color: #e76f51;
+  font-size: 2vw;
+  margin-top: 0.2vw;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-overlay.active {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+.modal-overlay .modal-content {
+  background: #fff;
+  padding: 1.04vw;
+  border-radius: 8px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.modal-overlay .modal-content .buy-button {
+  padding: 0.5vw 1vw;
+  font-size: 1.5vw;
+  background-color: #F4A261;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.modal-overlay .modal-content .buy-button:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.modal-overlay .modal-content .purchase-form {
+  margin-top: 1rem;
+}
+.modal-overlay .modal-content .purchase-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.modal-overlay .modal-content .purchase-form form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.modal-overlay .modal-content .purchase-form form input:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.modal-overlay .modal-content .purchase-form form button[type=submit] {
+  padding: 0.5rem;
+  background-color: #e76f51;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal-overlay .modal-content .purchase-form form button[type=submit]:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.modal-overlay .modal-content #modal-description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.modal-overlay .modal-content #modal-description .excursion {
+  color: rgb(24, 233, 94);
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.modal-overlay .modal-content #modal-description .desc {
+  color: #666;
+}
+.modal-overlay .modal-content #modal-description .departure-date {
+  color: #000;
+  font-weight: 600;
+}
+.modal-overlay .modal-content h2 {
+  margin-top: 0;
+  font-family: "Lora";
+  font-size: 2vw;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.modal-overlay .modal-content p {
+  font-family: "Inter";
+  font-size: 1.5vw;
+  color: black;
+  font-weight: 600;
+}
+.modal-overlay .modal-content #modal-price {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-overlay .modal-content #modal-price .original-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 1.4vw;
+}
+.modal-overlay .modal-content #modal-price .discounted-price {
+  color: #e76f51;
+  font-size: 1.5vw;
+  margin-top: 0.2vw;
+}
+.modal-overlay .close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+}
+.modal-overlay .close-button:hover {
+  color: #000;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modal-overlay .modal-image {
+  margin-top: 20px;
+  width: 50%;
+  height: auto;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.footer {
+  position: absolute;
+  bottom: -8vw;
+  background-color: #4A4A4A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.21vw;
+  width: 100%;
+}
+.footer .footer_items {
+  margin: 0 3vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vw;
+}
+.footer .footer_items img {
+  width: 2.6vw;
+  height: auto;
+}
+.footer .footer_items .item {
+  font-family: "Inter";
+  color: #CCCCCC;
+  font-size: 1.56vw;
+  font-weight: 500;
+}
+.footer .footer_items .item a {
+  color: #CCCCCC;
+  text-decoration: none;
+}
+.footer .footer_items .item a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(175, 94, 30);
+    padding: 1.25vw;
+    border-bottom: 0.375vw solid black;
+    transition: all 0.5s ease;
+  }
+  .header.active {
+    align-items: flex-start;
+  }
+  .header.active .menu-toggle {
+    margin-left: 2.5vw;
+    margin-top: 1.25vw;
+  }
+  .header.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15.645vw;
+    border-top: 1px solid black;
+  }
+  .header .menu-toggle {
+    width: 12.52vw;
+    margin-bottom: 2vw;
+  }
+  .header nav.menu_body {
+    display: none;
+    width: 100%;
+    margin-top: 1.25vw;
+    padding-left: 2.5vw;
+    text-align: left;
+  }
+  .header nav.menu_body.active {
+    display: block;
+  }
+  .header nav.menu_body .menu_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25vw;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .header nav.menu_body .menu_list li {
+    margin: 0.63vw 0;
+    width: 90%;
+    text-align: left;
+  }
+  .header nav.menu_body .menu_list li a {
+    font-size: 5.22vw;
+    color: black;
+    text-shadow: none;
+  }
+  .header nav.menu_body .menu_list li a::before {
+    content: "-";
+  }
+  .catalog {
+    gap: 7vw;
+  }
+  .catalog .product-card {
+    flex-direction: column;
+    gap: 1.2vw;
+    width: 60vw;
+    height: auto;
+    align-items: center;
+  }
+  .catalog .product-card .product-image {
+    width: 100%;
+    height: auto;
+  }
+  .catalog .product-card .information {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .catalog .product-card .information h5 {
+    font-size: 4vw;
+  }
+  .catalog .product-card .information p {
+    font-size: 3vw;
+  }
+  .catalog .product-card .price {
+    border: none;
+    border-top: 1px solid black;
+    width: 100%;
+    padding: 5px;
+    font-size: 3.8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .catalog .product-card .price .original-price {
+    font-size: 6vw;
+    text-decoration: line-through;
+    color: #888;
+  }
+  .catalog .product-card .price .discounted-price {
+    font-size: 7.83vw;
+    color: #e76f51;
+    margin-top: 0.5vw;
+  }
+  .modal-overlay .modal-content .buy-button {
+    font-size: 3vw;
+  }
+  .modal-overlay .modal-content #modal-description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .modal-overlay .modal-content #modal-description .desc {
+    color: #666;
+  }
+  .modal-overlay .modal-content h2 {
+    font-size: 5vw;
+  }
+  .modal-overlay .modal-content p {
+    font-size: 3vw;
+  }
+  .modal-overlay .modal-content .excursion {
+    color: rgb(24, 233, 94);
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  .modal-overlay .modal-content #modal-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .modal-overlay .modal-content #modal-price .original-price {
+    font-size: 2.5vw;
+    text-decoration: line-through;
+    color: #888;
+  }
+  .modal-overlay .modal-content #modal-price .discounted-price {
+    font-size: 3vw;
+    color: #e76f51;
+    margin-top: 0.3vw;
+  }
+  .modal-overlay .modal-image {
+    width: 70%;
+  }
+  #filter-container {
+    flex-direction: column;
+    gap: 0.52vw;
+    margin: 1.04vw 20%;
+    align-items: flex-start;
+  }
+  #filter-container input,
+  #filter-container select {
+    padding: 0.42vw;
+    border: 1px solid black;
+    border-radius: 4px;
+    flex-wrap: wrap;
+    font-size: 3vw;
+  }
+  #filter-container input#filterInput,
+  #filter-container select#filterInput {
+    width: 50vw;
+    flex-shrink: 0;
+  }
+  #filter-container input#nightsFilter,
+  #filter-container select#nightsFilter {
+    width: 10vw;
+    flex-shrink: 0;
+  }
+  #filter-container input#minPrice,
+  #filter-container select#minPrice {
+    flex-shrink: 0;
+    width: 15vw;
+  }
+  #filter-container input#maxPrice,
+  #filter-container select#maxPrice {
+    flex-shrink: 0;
+    width: 20vw;
+  }
+  #filter-container input#touristsFilter,
+  #filter-container select#touristsFilter {
+    flex-shrink: 0;
+    width: 12vw;
+  }
+  #filter-container input#dateFilter,
+  #filter-container select#dateFilter {
+    flex-shrink: 0;
+    width: 15vw;
+    font-size: 2.5vw;
+    padding: 0.5vw;
+  }
+  label {
+    font-size: 3vw;
+  }
+  .footer {
+    bottom: -80vw;
+    justify-content: space-between;
+    align-items: start;
+    height: 56vw;
+    width: 100%;
+    flex-direction: column;
+  }
+  .footer .footer_items {
+    margin: 5vw;
+  }
+  .footer .footer_items .item {
+    font-size: 5.22vw;
+  }
+  .footer .footer_items img {
+    width: 8.7vw;
+    height: auto;
+  }
+  .flatpickr-calendar {
+    width: 80vw !important;
+    max-width: 300px !important;
+    font-size: 2.5vw !important;
+  }
+  .flatpickr-calendar .flatpickr-month, .flatpickr-calendar .flatpickr-weekdays, .flatpickr-calendar .flatpickr-days {
+    font-size: 2.5vw !important;
+  }
+  .flatpickr-calendar .flatpickr-day {
+    width: 10vw !important;
+    height: 10vw !important;
+    line-height: 10vw !important;
+    font-size: 2.5vw !important;
+  }
+}/*# sourceMappingURL=tours.css.map */

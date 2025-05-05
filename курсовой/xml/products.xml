@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <product id="1">
+    <name>Турция</name>
+    <shortDesc>Пляжный отдых в Анталье</shortDesc>
+    <detailedDesc>Проведите 7 незабываемых ночей в отеле 4* с видом на Средиземное море. Насладитесь пляжным отдыхом на золотых песчаных пляжах Антальи. В стоимость включены экскурсии по историческим местам, таким как древний город Перге и водопады Дюден. Питание по системе "все включено" обеспечит комфорт и разнообразие блюд. Трансфер из аэропорта и обратно включен в стоимость тура.</detailedDesc>
+    <price>900</price>
+    <image>images/tours/id1.webp</image>
+    <hasExcursion>false</hasExcursion>
+    <nights>5-9</nights>
+    <tourists>1-9</tourists>
+    <departureDate>2025-06-15</departureDate>
+  </product>
+  <product id="2">
+    <name>Турция</name>
+    <shortDesc>Короткий тур в Стамбул</shortDesc>
+    <detailedDesc>Отправляйтесь в 3-дневное путешествие в Стамбул, проживая в уютном отеле 3* в центре города. Посетите Айя-Софию, Голубую мечеть и живописный Босфор во время экскурсий с гидом. Завтраки в отеле включены, а вечером вы сможете насладиться местной кухней в ресторанах Султанахмета. Трансферы из аэропорта организованы для вашего удобства. Этот тур идеально подходит для знакомства с культурной столицей Турции.</detailedDesc>
+    <price>800</price>
+    <image>images/tours/id2.jpeg</image>
+    <hasExcursion>true</hasExcursion>
+    <nights>1-3</nights>
+    <tourists>1-9</tourists>
+    <departureDate>2025-06-20</departureDate>
+  </product>
+  <product id="3">
+    <name>Турция</name>
+    <shortDesc>Пляжный отдых в Кемере</shortDesc>
+    <detailedDesc>Отдохните 7 ночей в роскошном отеле 5* на берегу моря в Кемере. Пляжи с кристально чистой водой и экскурсии к античным руинам Фаселиса и горе Тахталы ждут вас. Питание "все включено" включает блюда турецкой и международной кухни. В стоимость входят трансферы и анимационные программы для взрослых и детей. Этот тур подарит вам идеальное сочетание релакса и приключений.</detailedDesc>
+    <price>1200</price>
+    <image>images/tours/id3.webp</image>
+    <hasExcursion>false</hasExcursion>
+    <nights>5-7</nights>
+    <tourists>2-6</tourists>
+    <departureDate>2025-07-01</departureDate>
+  </product>
+  <product id="4">
+    <name>Турция</name>
+    <shortDesc>Семейный тур в Сиде</shortDesc>
+    <detailedDesc>Идеальный семейный отдых на 7 ночей в отеле 4* в Сиде с аквапарком и детским клубом. Пляжи Сиде идеально подходят для детей благодаря мелководью и мягкому песку. Включены анимационные программы и вечерние шоу для всей семьи. Питание "все включено" с детским меню и разнообразными напитками. Трансферы из аэропорта и обратно обеспечат комфортное начало и завершение путешествия.</detailedDesc>
+    <price>1000</price>
+    <image>images/tours/id4.webp</image>
+    <hasExcursion>false</hasExcursion>
+    <nights>7</nights>
+    <tourists>3-5</tourists>
+    <departureDate>2025-07-10</departureDate>
+  </product>
+  <product id="5">
+    <name>Египет</name>
+    <shortDesc>Пляжный отдых в Хургаде</shortDesc>
+    <detailedDesc>Проведите 7 ночей в отеле 4* на первой линии в Хургаде, наслаждаясь Красным морем. Бесплатное размещение для двоих детей до 12 лет делает этот тур идеальным для семей. Питание "все включено" включает свежие морепродукты и местные деликатесы. Трансферы из аэропорта и ежедневные анимации включены. Откройте для себя подводный мир во время снорклинга на близлежащих рифах.</detailedDesc>
+    <price>800</price>
+    <image>images/tours/id5.webp</image>
+    <hasExcursion>false</hasExcursion>
+    <nights>5-9</nights>
+    <tourists>3-6</tourists>
+    <departureDate>2025-08-01</departureDate>
+  </product>
+  <product id="6">
+    <name>Египет</name>
+    <shortDesc>Дайвинг-тур в Шарм-эль-Шейхе</shortDesc>
+    <detailedDesc>Погрузитесь в подводный мир Красного моря во время 7-дневного дайвинг-тура в Шарм-эль-Шейхе. Проживание в отеле 4* с видом на море и питанием "все включено". Включены 3 погружения с инструктором и экскурсия к национальному парку Рас-Мохаммед. Трансферы из аэропорта и обратно организованы. Этот тур подойдет как опытным дайверам, так и новичкам.</detailedDesc>
+    <price>1000</price>
+    <image>images/tours/id6.webp</image>
+    <hasExcursion>true</hasExcursion>
+    <nights>7</nights>
+    <tourists>3-5</tourists>
+    <departureDate>2025-08-15</departureDate>
+  </product>
+  <product id="7">
+    <name>Мальдивы</name>
+    <shortDesc>Райский отдых на островах</shortDesc>
+    <detailedDesc>Насладитесь 7 ночами в отеле 5* на частном острове Мальдив. Кристально чистые лагуны и белоснежные пляжи создают идеальные условия для релакса. Питание "полный пансион" включает блюда из свежих морепродуктов. Включены трансферы на гидросамолете из аэропорта Мале. Попробуйте снорклинг или спа-процедуры для полного умиротворения.</detailedDesc>
+    <price>2500</price>
+    <image>images/tours/id7.webp</image>
+    <hasExcursion>false</hasExcursion>
+    <nights>5-9</nights>
+    <tourists>1-4</tourists>
+    <departureDate>2025-09-01</departureDate>
+  </product>
+  <product id="8">
+    <name>Мальдивы</name>
+    <shortDesc>Романтический тур</shortDesc>
+    <detailedDesc>Проведите романтические 7 ночей в бунгало над водой в отеле 5* на Мальдивах. Насладитесь уединением и закатами с террасы вашего номера. Питание "полный пансион" с ужинами при свечах включено. Трансферы на катере из аэропорта Мале организованы. В стоимость входит одна экскурсия на соседний остров и спа-сессия для двоих.</detailedDesc>
+    <price>3000</price>
+    <image>images/tours/id8.webp</image>
+    <hasExcursion>false</hasExcursion>
+    <nights>7</nights>
+    <tourists>2</tourists>
+    <departureDate>2025-09-10</departureDate>
+  </product>
+  <product id="9">
+    <name>Средиземноморский круиз</name>
+    <shortDesc>Круиз по Европе</shortDesc>
+    <detailedDesc>Отправляйтесь в 10-дневный круиз по Средиземноморью на лайнере 5*. Посетите Италию (Рим), Грецию (Санторини) и Испанию (Барселона) с экскурсиями в каждом порту. Питание "полный пансион" с изысканными ужинами включено. На борту доступны бассейны, спа и вечерние шоу. Трансферы из аэропорта до порта и обратно организованы.</detailedDesc>
+    <price>2000</price>
+    <image>images/tours/id9.jpg</image>
+    <hasExcursion>true</hasExcursion>
+    <nights>7-10</nights>
+    <tourists>1-8</tourists>
+    <departureDate>2025-07-20</departureDate>
+  </product>
+  <product id="10">
+    <name>Карибский круиз</name>
+    <shortDesc>Круиз по Карибам</shortDesc>
+    <detailedDesc>Исследуйте Карибские острова во время 10-дневного круиза на роскошном лайнере. Посетите Ямайку, Багамы и Мексику с экскурсиями по историческим местам и пляжам. Питание "полный пансион" включает тропические коктейли и морепродукты. На борту доступны аквапарк и театральные шоу. Трансферы из аэропорта до порта включены.</detailedDesc>
+    <price>2500</price>
+    <image>images/tours/id10.webp</image>
+    <hasExcursion>true</hasExcursion>
+    <nights>7-10</nights>
+    <tourists>2-8</tourists>
+    <departureDate>2025-08-20</departureDate>
+  </product>
+  <product id="11">
+    <name>Италия</name>
+    <shortDesc>Культурный тур по Риму</shortDesc>
+    <detailedDesc>Погрузитесь в историю Рима во время 5-дневного тура с проживанием в отеле 4* в центре города. Посетите Колизей, Пантеон и Ватикан с профессиональным гидом. Гастрономические экскурсии познакомят вас с итальянской кухней, включая дегустацию вин. Завтраки в отеле и трансферы из аэропорта включены. Этот тур идеально подходит для ценителей искусства и культуры.</detailedDesc>
+    <price>1500</price>
+    <image>images/tours/id11.webp</image>
+    <hasExcursion>true</hasExcursion>
+    <nights>5</nights>
+    <tourists>2-6</tourists>
+    <departureDate>2025-10-01</departureDate>
+  </product>
+  <product id="12">
+    <name>Греция</name>
+    <shortDesc>Исторический тур по Афинам</shortDesc>
+    <detailedDesc>Откройте для себя Грецию за 7 ночей, проживая в отеле 4* в Афинах. Экскурсии к Акрополю и храму Зевса расскажут об античной истории. Включен круиз на остров Санторини с посещением белоснежных деревень. Завтраки в отеле и ужины на острове включены. Трансферы из аэропорта и между городами организованы для вашего комфорта.</detailedDesc>
+    <price>1400</price>
+    <image>images/tours/id12.webp</image>
+    <hasExcursion>true</hasExcursion>
+    <nights>5-7</nights>
+    <tourists>1-6</tourists>
+    <departureDate>2025-10-15</departureDate>
+  </product>
+  <product id="13">
+    <name>Таиланд</name>
+    <shortDesc>Пляжный отдых в Пхукете</shortDesc>
+    <detailedDesc>Насладитесь 10 ночами в отеле 4* на пляже Патонг в Пхукете. Тропические пляжи и ночные рынки создают уникальную атмосферу. Питание "завтрак и ужин" включает блюда тайской кухни. Трансферы из аэропорта и обратно включены. Попробуйте массаж или экскурсии к островам Пхи-Пхи за дополнительную плату.</detailedDesc>
+    <price>1200</price>
+    <image>images/tours/id13.webp</image>
+    <hasExcursion>false</hasExcursion>
+    <nights>7-10</nights>
+    <tourists>2-5</tourists>
+    <departureDate>2025-11-01</departureDate>
+  </product>
+  <product id="14">
+    <name>Испания</name>
+    <shortDesc>Тур в Барселону</shortDesc>
+    <detailedDesc>Проведите 5 ночей в отеле 4* в центре Барселоны, исследуя шедевры Гауди. Экскурсии к Саграда Фамилия и парку Гуэль включены в стоимость. Завтраки в отеле и дегустация каталонской кухни добавят ярких впечатлений. Трансферы из аэропорта организованы. Пляжи Барселонеты станут отличным дополнением к культурной программе.</detailedDesc>
+    <price>1600</price>
+    <image>images/tours/id14.jpg</image>
+    <hasExcursion>true</hasExcursion>
+    <nights>5</nights>
+    <tourists>1-6</tourists>
+    <departureDate>2025-11-15</departureDate>
+  </product>
+  <product id="15">
+    <name>ОАЭ</name>
+    <shortDesc>Люкс-отдых в Дубае</shortDesc>
+    <detailedDesc>Проведите 7 ночей в отеле 5* в Дубае с видом на Бурдж-Халифа. Экскурсия в пустыню с сафари и ужином под звездами включена. Питание "полупансион" с блюдами арабской и международной кухни. Трансферы из аэропорта и шопинг в Dubai Mall добавят комфорта. Этот тур идеален для любителей роскоши и приключений.</detailedDesc>
+    <price>1300</price>
+    <image>images/tours/id15.webp</image>
+    <hasExcursion>true</hasExcursion>
+    <nights>5-7</nights>
+    <tourists>2-5</tourists>
+    <departureDate>2025-12-01</departureDate>
+  </product>
+  <product id="16">
+    <name>Мексика</name>
+    <shortDesc>Тур в Канкун</shortDesc>
+    <detailedDesc>Отдохните 7 ночей в отеле 4* на Карибском побережье Канкуна. Экскурсии к пирамидам Чичен-Ица и сенотам включены в стоимость. Питание "все включено" с мексиканскими блюдами и коктейлями. Трансферы из аэропорта организованы. Пляжи Канкуна и местная культура сделают ваш отдых незабываемым.</detailedDesc>
+    <price>1800</price>
+    <image>images/tours/id16.webp</image>
+    <hasExcursion>true</hasExcursion>
+    <nights>7</nights>
+    <tourists>2-6</tourists>
+    <departureDate>2025-12-10</departureDate>
+  </product>
+</catalog>
