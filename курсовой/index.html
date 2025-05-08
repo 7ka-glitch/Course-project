@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <!-- навигационное меню и картинка -->
   <div class="background_image1">
     <div class="header">
       <img src="/images/icons/ballon.svg" alt="меню" class="menu-toggle">
@@ -20,11 +21,13 @@
         </ul>
       </nav>
     </div>
+    <!-- Картинка для экранов <=800px -->
     <div class="background_image2">
       <div class="M-M_container">
         <h1>M-M Travels</h1>
         <h2>Авторские туры</h2>
         <div class="found_menu">
+          <!-- форма для подбора тура -->
           <form method="GET" action="/tours.html">
             <div class="element">
               <label for="departure_city">Город вылета:</label>
@@ -69,7 +72,9 @@
       </div>
     </div>
   </div>
+
   <div class="main">
+    <!-- Блок почему мы? -->
     <p class="title"><span class="title_span">-</span>Почему мы?</p>
     <div class="why_us_selection">
       <img class="why_us_picture1" src="/images/camel.png" alt="">
@@ -99,6 +104,7 @@
       </div>
       <img class="why_us_picture2" src="/images/stone.png" alt="">
     </div>
+    <!-- блок с популярными турами -->
     <div class="popular_tour_selection">
       <p class="title"><span class="title_span">-</span>Популярные туры</p>
       <div class="slider">
@@ -117,6 +123,7 @@
         <div class="btn next_btn"><img src="/images/icons/arrow.svg" alt=""></div>
       </div>
     </div>
+    <!-- блок с экскурсиями -->
     <div class="excursions_selection">
       <p class="title"><span class="title_span">-</span>Экскурсии</p>
       <div class="excursion_items">
@@ -150,7 +157,7 @@
       </div>
     </div>
   </div>
-
+  <!-- контакты -->
   <div class="footer">
     <div class="footer_items">
       <img src="/images/icons/inst.svg" alt="instagram">
@@ -166,10 +173,10 @@
     </div>
   </div>
 
-
+  <!-- js Для слайдера и выпадающего меню для экранов <=800px -->
   <script src="/js/main_slider.js"></script>
   <script src="/js/main_page.js"></script>
-  
+
 
 </body>
 
