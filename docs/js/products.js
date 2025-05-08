@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (queryParams.hasExcursion === 'true') document.getElementById('excursionFilter').checked = true;
     if (queryParams.date && queryParams.date !== 'autumn') document.getElementById('dateFilter').value = queryParams.date;
 
-    fetch('./xml/products.xml')
+    fetch('xml/products.xml')
       .then(response => {
         if (!response.ok) throw new Error(`Ошибка загрузки XML: ${response.status}`);
         return response.text();
