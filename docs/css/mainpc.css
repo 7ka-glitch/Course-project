@@ -6,7 +6,7 @@ body {
 
 @font-face {
   font-family: "Iner";
-  src: url(/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
+  src: url(../fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
 }
 @font-face {
   font-family: "Lora";
@@ -29,7 +29,7 @@ body {
 .background_image1 {
   margin: 0 auto;
   height: 100vh;
-  background-image: url("/images/desert.jpg");
+  background-image: url("../images/desert.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -129,7 +129,7 @@ body {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-image: url("/images/icons/arrow_for_selectors.svg");
+  background-image: url("../images/icons/arrow_for_selectors.svg");
   background-repeat: no-repeat;
   background-position: right 0.52vw center;
   background-size: 0.89vw;
@@ -293,7 +293,7 @@ body {
   border-radius: 20px;
   width: 60%;
   height: 40vw;
-  background-image: url(/images/desert.jpg);
+  background-image: url("../images/desert.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -488,7 +488,7 @@ body {
   .background_image2 {
     width: 101%;
     height: 56.6vw;
-    background-image: url(/images/desert.jpg);
+    background-image: url("../images/desert.jpg");
     background-size: 100% auto;
     background-position: top;
     background-repeat: no-repeat;

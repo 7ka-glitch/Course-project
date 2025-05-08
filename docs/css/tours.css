@@ -14,11 +14,11 @@ body {
 
 @font-face {
   font-family: "Lora";
-  src: url(/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf);
+  src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf);
 }
 @font-face {
   font-family: "Inter";
-  src: url(/fonts/Inter/);
+  src: url(../fonts/Inter/);
 }
 .header {
   background-color: rgb(175, 94, 30);
