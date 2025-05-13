@@ -3,9 +3,7 @@ const buttons = document.querySelectorAll('.btn');
 let imageIndex = 0;
 
 function show(index) {
-    // Убираем active с текущего изображения
     images[imageIndex].classList.remove('active');
-    // Добавляем active к новому изображению
     images[index].classList.add('active');
     imageIndex = index;
 }
@@ -28,7 +26,7 @@ buttons.forEach((button) => {
     });
 });
 
-// Инициализация слайдера с первым изображением
+
 if (images.length > 0) {
     show(imageIndex);
 }

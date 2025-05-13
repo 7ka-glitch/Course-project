@@ -8,7 +8,7 @@
 </head>
 <body>
   <!-- Верхнее меню -->
-  <div class="header">
+  <header class="header">
     <img src="images/icons/ballon.svg" alt="меню" class="menu-toggle">
     <nav class="menu_body">
       <ul class="menu_list">
@@ -18,48 +18,49 @@
         <li><a href="index.html" class="main">Главная</a></li>
       </ul>
     </nav>
-  </div>
+  </header>
 
-  <div class="container">
-    <!-- Блок фильтров -->
-    <div id="filter-container">
-      <input type="text" id="filterInput" placeholder="Поиск по названию или описанию">
-      <input type="number" id="minPrice" placeholder="Мин. цена">
-      <input type="number" id="maxPrice" placeholder="Макс. цена">
-      <input type="number" id="nightsFilter" placeholder="Ночей" min="1" max="9">
-      <input type="number" id="touristsFilter" placeholder="Туристы" min="1" max="10">
-      <input type="date" id="dateFilter">
-      <select id="sortSelect">
-        <option value="default">-- Сортировать --</option>
-        <option value="nameAsc">По названию (А-Я)</option>
-        <option value="nameDesc">По названию (Я-А)</option>
-        <option value="priceAsc">По цене (возрастание)</option>
-        <option value="priceDesc">По цене (убывание)</option>
-      </select>
-      <label>
-        <input type="checkbox" id="excursionFilter"> Только с экскурсией
-      </label>
-    </div>
+  <header>
+    <div class="container">
+      <!-- Блок фильтров -->
+      <div id="filter-container">
+        <input type="text" id="filterInput" placeholder="Поиск по названию или описанию">
+        <input type="number" id="minPrice" placeholder="Мин. цена">
+        <input type="number" id="maxPrice" placeholder="Макс. цена">
+        <input type="number" id="nightsFilter" placeholder="Ночей" min="1" max="9">
+        <input type="number" id="touristsFilter" placeholder="Туристы" min="1" max="10">
+        <input type="date" id="dateFilter">
+        <select id="sortSelect">
+          <option value="default">-- Сортировать --</option>
+          <option value="nameAsc">По названию (А-Я)</option>
+          <option value="nameDesc">По названию (Я-А)</option>
+          <option value="priceAsc">По цене (возрастание)</option>
+          <option value="priceDesc">По цене (убывание)</option>
+        </select>
+        <label>
+          <input type="checkbox" id="excursionFilter"> Только с экскурсией
+        </label>
+      </div>
     
-    <!-- Контейнер для карточек товаров -->
-    <div id="catalog-container" class="catalog"></div>
-  </div>
-
-  <!-- Модальное окно -->
-  <div id="modal-overlay" class="modal-overlay">
-    <div class="modal-content">
-      <span class="close-button" id="closeModal">×</span>
-      <img id="modal-image" src="a" alt="Изображение товара" class="modal-image">
-      <h2 id="modal-title">%</h2>
-      <p id="modal-description"></p>
-      <p id="modal-price"></p>
-      <button id="buy-button" class="buy-button">Купить</button>
-      <div id="purchase-form" class="purchase-form" style="display: none; margin-top: 1rem;"></div>
+      <!-- Контейнер для карточек товаров -->
+      <div id="catalog-container" class="catalog"></div>
     </div>
-  </div>
+    <!-- Модальное окно -->
+    <div id="modal-overlay" class="modal-overlay">
+      <div class="modal-content">
+        <span class="close-button" id="closeModal">×</span>
+        <img id="modal-image" src="a" alt="Изображение товара" class="modal-image">
+        <h2 id="modal-title">%</h2>
+        <p id="modal-description"></p>
+        <p id="modal-price"></p>
+        <button id="buy-button" class="buy-button">Купить</button>
+        <div id="purchase-form" class="purchase-form" style="display: none; margin-top: 1rem;"></div>
+      </div>
+    </div>
+  </header>
   
   <!-- Нижний колонтитул с данными -->
-  <div class="footer">
+  <footer class="footer">
     <div class="footer_items">
       <img src="images/icons/inst.svg" alt="instagram">
       <p class="item"><a href="https://instagram.com/_7k.a_">_7k.a_</a></p>
@@ -72,7 +73,7 @@
       <img src="images/icons/mail.svg" alt="mail">
       <p class="item">karlyukartem07@outlook.com</p>
     </div>
-  </div>
+  </footer>
   
   <!-- js Для фильтров, модального окна, отправки формы, создания блоков с турами и выпадающего меню для экранов <=800px -->
   <script src="js/main_page.js"></script>

@@ -4,24 +4,23 @@ const btn = document.querySelectorAll('.btn');
 const description = document.querySelector('.description');
 let imageIndex = 0;
 
-// Массив стран, соответствующих изображениям в слайдере
 const countries = [
-  'Таиланд', // images/tours/id13.webp
-  'ОАЭ',     // images/tours/id15.webp
-  'Египет',  // images/tours/id5.webp
-  'Испания', // images/tours/id14.jpg
-  'Турция'   // images/tours/id1.webp
+  'Таиланд', 
+  'ОАЭ',     
+  'Египет',  
+  'Испания', 
+  'Турция'   
 ];
 
 function show(index) {
-    // Убираем active с текущих изображения и ссылки
+   
     images[imageIndex].classList.remove('active');
     links[imageIndex].classList.remove('active');
-    // Добавляем active к новому изображению и ссылке
+   
     images[index].classList.add('active');
     links[index].classList.add('active');
     imageIndex = index;
-    // Обновляем текст в .description
+   
     description.textContent = countries[index];
 }
 
