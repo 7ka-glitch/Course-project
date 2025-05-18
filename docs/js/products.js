@@ -23,7 +23,7 @@ function renderCatalog(productsList) {
   let html = '';
 
   productsList.forEach(product => {
-    const imageSrc = product.image || 'images/placeholder.png';
+    const imageSrc = product.image || '';
     const excursionText = product.hasExcursion ? '<p class="excursion">Экскурсия</p>' : '';
     const nightsText = product.nights ? `<p class="nights">Ночей: ${product.nights}</p>` : '';
     const touristsText = product.tourists ? `<p class="tourists">Туристы: ${product.tourists}</p>` : '';
@@ -77,7 +77,7 @@ function openModal(product) {
   document.getElementById('modal-price').innerHTML = priceText;
 
   const modalImage = document.getElementById('modal-image');
-  modalImage.src = product.image || 'images/placeholder.png';
+  modalImage.src = product.image || '';
   modalImage.alt = product.name;
 
   const excursionText = product.hasExcursion ? 'Экскурсия' : '';
@@ -99,10 +99,15 @@ function openModal(product) {
   const buyButton = document.getElementById('buy-button');
   const purchaseFormContainer = document.getElementById('purchase-form');
 
+  const [minNights, maxNights] = product.nights.split('-').map(Number);
+  const [minTourists, maxTourists] = product.nights.split('-').map(Number);
+
   purchaseFormContainer.innerHTML = `
     <h3>Оформление покупки</h3>
     <form id="buyForm" action="https://formspree.io/f/movdewze" method="POST">
       <input type="text" id="fullName" name="fullName" placeholder="ФИО" required>
+      <input type="number" id="nights" name="nights" placeholder="Количество ночей" min="${minNights}" max="${maxNights}" required>
+      <input type="number" id="tourists" name="tourists" placeholder="Количество туристов" min="${minTourists}" max="${maxTourists}" required>
       <input type="email" id="email" name="email" placeholder="Email" required>
       <input type="hidden" id="tourName" name="tourName" value="${product.name}">
       <input type="hidden" id="tourPrice" name="tourPrice" value="${discountedPrice || originalPrice}$">
@@ -120,37 +125,7 @@ function openModal(product) {
     purchaseFormContainer.style.display = 'block';
   }, { once: true });
 
-  const buyForm = document.getElementById('buyForm');
-  buyForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const fullName = document.getElementById('fullName').value;
-    const email = document.getElementById('email').value;
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      alert('Введите корректный email');
-      return;
-    }
-    const formData = new FormData(buyForm);
-    try {
-      const response = await fetch('https://formspree.io/f/movdewze', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-      if (response.ok) {
-        alert('Заявка успешно отправлена!');
-        buyForm.reset();
-        modalOverlay.classList.remove('active');
-        purchaseFormContainer.style.display = 'none';
-        buyButton.style.display = 'block';
-      } else {
-        alert('Ошибка при отправке заявки. Попробуйте снова.');
-      }
-    } catch (error) {
-      alert('Ошибка сети. Проверьте подключение и попробуйте снова.');
-    }
-  }, { once: true });
+ 
 }
 
 // Закрытие модального окна
