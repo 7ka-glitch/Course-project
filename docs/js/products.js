@@ -92,6 +92,7 @@ function openModal(product) {
     <p class="tourists">${touristsText}</p>
     <p class="departure-date">${dateText}</p>
   `;
+  document.getElementById('modal-description').style.display='block';
 
   modalOverlay.classList.add('active');
 
@@ -115,6 +116,7 @@ function openModal(product) {
 
   buyButton.addEventListener('click', () => {
     buyButton.style.display = 'none';
+  document.getElementById('modal-description').style.display='none';
     purchaseFormContainer.style.display = 'block';
   }, { once: true });
 
